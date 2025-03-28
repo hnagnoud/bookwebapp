@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="css/style_sachmoi.css" />
+    <body>
+        scroll-padding-top: 123px;
+        <div class="desktop"><div class="div"></div></div>
+        <!-- toolbar -->
+        <%- include("./partials/toolbar.ejs") %>
+         
+        <section>
+            <section class="Sach">
+                <div class="product">
+                    <div class="header2">
+                        <h2 id="pageTitle"><%= pageTitle %></h2>
+                        <!-- <div id="sortBy">
+                            <p>Sắp xếp theo:</p>
+                            <select id="optionSort">
+                                <option>Mới nhất</option>
+                                <option>Cũ nhất</option>
+                                <option>Giá tăng dần</option>
+                                <option>Giá giảm dần</option>
+                            </select>
+                        </div> -->
+                    </div>
+                    <div id="line"></div>
+                    <div class="items">
+                        <% if (spmois.length > 0) { %>
+                            <% spmois.forEach(spmoi => { %>
+                                <div class="item">
+                                    <img src="<%= spmoi.img_small2 %>" onclick="window.location.href ='/main/<%= spmoi.id %>'" alt="">
+                                    <ul class="text">
+                                        <li class="ten-sach" onclick="window.location.href ='/main/<%= spmoi.id %>'"><%= spmoi.tensach %></li>
+                                        <li class="gia-tien"><%= spmoi.giagiam %></li>
+                                        <li class="gia-goc"><%= spmoi.giagoc %></li>
+                                    </ul>
+                                </div>
+                            <% }) %>    
+                        <% } %>
+                    </div>
+                    <ul class="listPage"></ul>
+                </div>
+            </section>
+            
+            <script src="js/productJS/phanTrang.js"></script>
+        </section>
+        <!--footer-->
+        <%- include("./partials/footer.ejs") %>
+    </body>
+</html>

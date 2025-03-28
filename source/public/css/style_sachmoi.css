@@ -1,0 +1,192 @@
+.Sach
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.product
+{
+    background-color: white;
+    height: 1920px;
+    width: 1197px;
+    padding: 12px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px #9a9e9f;
+}
+.header2
+{
+    display: flex;
+}
+.header2 h2
+{
+    width: 360px;
+    height: 86px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
+    line-height: 86px; /* Chiều cao dòng chữ giống với chiều cao của phần tử để căn giữa theo chiều dọc */
+    margin: 0px;
+}
+#sortBy
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: 33px;
+}
+#sortBy p
+{
+    width: 123px;
+    height: 86px;
+    font-family: "Inter-Medium", Helvetica;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 16px;
+    margin: 0px;
+    text-align: right;
+    line-height: 86px;
+}
+#optionSort
+{
+    width: 152px;
+    height: 37px;
+    font-family: "Inter-Medium", Helvetica;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 16px;
+    margin-top: 24.5px;
+    margin-left: 14px;
+    line-height: 37px;
+    border-color: #7A7E7F;
+    border-radius: 10px;
+}
+#line
+{
+    width: 100%;
+    height: 1px;
+    background: #d7d7d7;
+}
+.items
+{
+    display: grid;
+    grid-template-columns: repeat(5, 220px); /* 5 cột với chiều rộng tự động chia đều */
+    grid-template-rows: repeat(4, 400px);
+    gap: 16px;
+    justify-content: space-evenly;
+    padding-top: 42px;
+    padding-bottom: 22px;
+}
+.item
+{
+    height: 385px;
+    width: 220px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #9a9e9f;
+}
+.item .text
+{
+margin-top: 0px;
+}
+.item img
+{
+    height: 309px;
+    width: 220px;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+.text li
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.text .ten-sach
+{
+    width: 90%; /* mới thêm*/
+    height: 22px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    padding-left: 10px;
+    color: #000000;
+
+    /* mới thêm*/ 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.text .gia-tien
+{
+    width: 95px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+padding-left: 10px;
+color: #D51C24;
+}
+.text .gia-goc
+{
+height: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: left; /* mới thêm*/
+text-decoration-line: line-through;
+
+padding-left: 10px;
+color: #7A7E7F;
+}
+.listPage{
+    font-size: 20px;
+    color: #cb6ce6;
+    text-align: center;
+    list-style: none;
+}
+.listPage li{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: solid #cb6ce6;
+    padding: 20px;
+    display: inline-block;
+    margin:0 10px;
+    cursor: pointer;
+}
+.listPage .active{
+    background-color: #cb6ce6;
+    color: white;
+}
+.searchResult
+{
+    height: 50px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: left;
+    line-height: 50px; /* Chiều cao dòng chữ giống với chiều cao của phần tử để căn giữa theo chiều dọc */
+    margin-left: 37px;
+    position: absolute;
+}

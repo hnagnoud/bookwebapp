@@ -1,0 +1,131 @@
+/*toolbar_section*/
+button
+{
+    vertical-align: unset !important;
+}
+.box {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 5px 5px 0px #9a9e9f;
+}
+
+.box img{
+    float: left;
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    cursor: pointer; /*mới thêm*/
+}
+
+.box #menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    width: 61px;
+    height: 61px;
+    border: none;
+    float: left;
+}
+
+.box input{
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7a7e7f;
+    font-size: 20px;
+    border: solid #7a7e7f;
+    border-radius: 10px;
+    float: left;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.box #search{
+    position: absolute;
+    top: 20%;
+    left: 94%;
+    width: 51px;
+    height: 51px;
+    border: none;
+    float: left;
+    box-sizing: border-box;
+}
+
+.box .category {
+    position: fixed;
+    width: 61px;
+    height: 61px;
+    top: 31px;
+    left: 290px;
+}
+
+#love{
+    text-align: center;
+}
+
+#love button {
+    margin-top: 12%;
+    width: 30%;
+    height: 35%;
+    border: none;
+    background-size: cover;
+    background-image: url(/image/toolbar_section/love.PNG);
+    background-position: center;
+}
+#love p {    
+    font-family: Roboto;
+    font-weight: 500;
+    color: #7a7e7f;
+    font-size: 13px;
+}
+
+#gio-hang {
+    text-align: center;
+}
+#gio-hang button {
+    margin-top: 8%;
+    width: 28%;
+    height: 45%;
+    border: none;
+    background-size: cover;
+    background-position: center;
+}
+#gio-hang p {
+    font-family: Roboto;
+    font-weight: 500;
+    color: #7a7e7f;
+    font-size: 13px;
+}
+
+
+#tai-khoan {
+    text-align: center;
+}
+.container #tk {
+    margin-top: 10%;
+    width: 30%;
+    height: 45%;
+    border: none;
+    background-size: cover;
+    background-position: center;
+}
+.container p {
+    font-family: Roboto;
+    font-weight: 500;
+    color: #7a7e7f;
+    font-size: 13px;
+}
+

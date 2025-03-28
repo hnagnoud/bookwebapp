@@ -1,0 +1,154 @@
+.Sach
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.product
+{
+    background-color: white;
+    height: 550px;
+    width: 80%;
+    padding: 12px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px #9a9e9f;
+}
+.header2
+{
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
+}
+.items
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.item
+{
+    height: 385px;
+    width: 220px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #9a9e9f;
+}
+.item:hover
+{
+    box-shadow: 5px 5px 5px #9a9e9f;
+    transform: translate(-3px, -3px);
+}
+.item .text
+{
+margin-top: 0px;
+}
+.item img
+{
+    height: 309px;
+    width: 220px;
+    cursor: pointer;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+.text li
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.text .ten-sach
+{
+    width: 90%; /* mới thêm*/
+    height: 22px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    padding-left: 10px;
+    color: #2c4a52;
+
+    /* mới thêm*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.text .gia-tien
+{
+    width: 95px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+padding-left: 10px;
+color: #D51C24;
+}
+.text .gia-goc
+{
+height: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: left; /* mới thêm*/
+text-decoration-line: line-through;
+
+padding-left: 10px;
+color: #7A7E7F;
+}
+.xemthem
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+.xemthem button
+{
+    width: 179px;
+    height: 41px;
+    border-radius: 10px;
+    border: solid #6abdcc80;
+    background-color: white;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #427a88;
+}
+.xemthem button:hover
+{
+    background-color: #aaeaf580;
+    color: white;
+}
+.banner-nxb
+{
+    position:relative;
+    width: 90%;
+}
+.header2 h2{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #427a88;
+    font-family: Roboto;
+}

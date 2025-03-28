@@ -1,0 +1,10 @@
+/*main-banner_section*/
+.d-block {
+    height: 600px;
+    width: 90%;
+}
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

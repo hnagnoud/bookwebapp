@@ -1,0 +1,79 @@
+<div class="box"> 
+    <div style="width: 20%; position: relative;"><img src="/image/Logo.png" onclick="location.href='/'" alt=""> <!--! /*mới sửa onclick*/--></div>
+    <div style="width: 7%; position: relative;"><button id="menu" style="background: url(/image/toolbar_section/Category.png)"></button></div>
+    <div class="dropdown-content" id="myDropdown" style="display: none;"> <!--mới thêm style-->
+        <!-- Nội dung của dropdown sẽ được đặt ở đây -->
+        <a class="cate-item">VĂN HỌC</a>
+        <a href="/tieuthuyet">Tiểu thuyết</a>
+        <a href="/tntv">Truyện ngắn - Tản văn</a>
+        <a href="/lightnovel">Light Novel</a>
+        <a class="cate-item">THIẾU NHI</a>
+        <a href="/truyentranh">Truyện tranh</a>
+        <a class="cate-item">GIÁO KHOA - THAM KHẢO</a>
+        <a href="/sgk">Sách giáo khoa</a>
+        <a href="/luyenthi">Luyện thi THPT Quốc Gia</a>
+        <a class="cate-item" href="/sachmoi">SÁCH MỚI</a>
+        <a class="cate-item" href="/sachbanchay">SÁCH BÁN CHẠY</a>
+    </div>
+    <script>
+      // Lắng nghe sự kiện click trên button
+      document.getElementById("menu").addEventListener("click", function() {
+        // Lấy ra phần dropdown
+        var dropdown = document.getElementById("myDropdown");
+        // Kiểm tra xem dropdown hiện đang ẩn hay hiển thị
+        if (dropdown.style.display === "none") {
+            // Nếu đang ẩn, thì hiển thị dropdown bằng cách thêm class "show" vào nó
+            dropdown.style.display = "block";
+        } else {
+            // Nếu đang hiển thị, thì ẩn dropdown bằng cách loại bỏ class "show" khỏi nó
+            dropdown.style.display = "none";
+        }
+    });  
+    </script>
+    <div style="width: 49%; position: relative;">
+        <input id="searchInput" placeholder="  Tìm kiếm sản phẩm...">
+        <button id="search" style="background: url(/image/toolbar_section/Search.png)"></button>
+        <script>
+            const searchButton = document.getElementById("search");
+        
+            if (searchButton) {
+                searchButton.addEventListener("click", function() {
+                    const searchText = document.getElementById("searchInput").value;
+                    if (searchText !== '') {
+                        window.location.href = `/search/${encodeURIComponent(searchText)}`;
+                    }
+                });
+            }
+        </script>
+    </div>    
+    <div id="love" style="width: 8%; position: relative;">
+        <button type="button" onclick="location.href='/yeuthich'"></button>
+        <p style="padding-left: 5px; font-family: Roboto">Yêu thích</p>
+    </div>
+    <div id="gio-hang" style="width: 8%; position: relative;">
+        <button style="background: url(/image/toolbar_section/Shopping-Cart.png)" onclick="location.href='/giohang'"></button>
+        <p style="font-family: Roboto">Giỏ hàng</p>
+    </div>        
+    <%if (kh != '') { %>
+        <div class="dropdown" id="tai-khoan" style="width: 8%;">
+            <div class="container" style="height: 100%;">
+                <button id="tk" style="background: url(/image/toolbar_section/Person.png)"></button>
+                <p style="font-family: Roboto"><%= kh %></p>
+            </div>
+            <div class="dropdown-content">
+               <a href="/logout" style="font-family: Roboto">Đăng xuất</a>
+            </div>
+        </div>
+    <% } else { %>
+        <div class="dropdown" id="tai-khoan" style="width: 8%;">
+            <div class="container" style="height: 100%;" href="/login">
+                <button id="tk" style="background: url(/image/toolbar_section/Person.png)"></button>
+                <p style="font-family: Roboto">Tài khoản</p>
+            </div>
+            <div class="dropdown-content">
+                <a href="/login" style="font-family: Roboto">Đăng nhập</a>
+                <a href="/signup" style="font-family: Roboto">Đăng ký</a>
+            </div>
+        </div>
+    <% } %>
+</div>
