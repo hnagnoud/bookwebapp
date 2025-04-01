@@ -5,13 +5,17 @@ pipeline {
         DOCKER_IMAGE = "hnagnoud/node-app"
         K8S_DEPLOYMENT = "k8s/deploy_svc.yaml"
         NAMESPACE = "test"
-    }
+    }        
 
     stages {
+        stage('Setup Git Safe Directory') {
+            steps {
+                sh 'git config --global --add safe.directory /var/jenkins_home/workspace/test'
+            }
+        }
         stage('Checkout Code') {  // Lấy code từ GitHub
             steps {
                 git branch: 'master', url: 'https://github.com/hnagnoud/bookwebapp.git'
-                sh 'git config --global --add safe.directory /var/jenkins_home/workspace/test'
             }
         }
 
