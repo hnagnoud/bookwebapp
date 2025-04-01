@@ -2,6 +2,7 @@ pipeline {
     agent any  // Chạy trên bất kỳ agent nào
 
     environment {
+        DOCKER_HOST = "unix:///run/user/1000/docker.sock"
         DOCKER_IMAGE = "hnagnoud/node-app"
         K8S_DEPLOYMENT = "k8s/deploy_svc.yaml"
         NAMESPACE = "test"
