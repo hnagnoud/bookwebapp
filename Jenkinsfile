@@ -11,6 +11,7 @@ pipeline {
         stage('Checkout Code') {  // Lấy code từ GitHub
             steps {
                 git branch: 'master', url: 'https://github.com/hnagnoud/bookwebapp.git'
+                cd bookwebapp
             }
         }
 
