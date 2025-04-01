@@ -8,6 +8,11 @@ pipeline {
     }        
 
     stages {
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Setup Git Safe Directory') {
             steps {
                 sh 'git config --global --add safe.directory /var/jenkins_home/workspace/test'
